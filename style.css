@@ -1,0 +1,52 @@
+/*
+  Réglages visuels principaux (modifier ici)
+  - police-principale: police utilisée pour tout le site
+  - couleur-texte: couleur principale du texte
+  - couleur-accent: couleur pour accents et liens
+  - fond-page: couleur de fond de la page
+  - rayon-carte: arrondi des coins des cartes et images
+  - contour: épaisseur et couleur des bordures légères
+  - espacement-base: unité de base pour marges/paddings
+*/
+:root{
+  --police-principale: "Helvetica Neue", Arial, sans-serif;
+  --couleur-texte: #222222;
+  --couleur-accent: #2b6cb0;
+  --fond-page: #ffffff;
+  --rayon-carte: 8px;
+  --contour: 1px solid rgba(0,0,0,0.06);
+  --espacement-base: 1rem;
+}
+
+/* Mise en forme générale */
+html,body{
+  height:100%;
+}
+body{
+  font-family: var(--police-principale);
+  color: var(--couleur-texte);
+  background: var(--fond-page);
+  line-height:1.45;
+}
+
+/* Cartes projet et images */
+.card{ border-radius: var(--rayon-carte); border: var(--contour); }
+.card-img-top{ border-top-left-radius: var(--rayon-carte); border-top-right-radius: var(--rayon-carte); object-fit:cover; height:220px; }
+
+/* Galerie simple */
+.project-gallery img{ width:100%; height:auto; border-radius: var(--rayon-carte); border: var(--contour); }
+
+/* Titres */
+h1,h2,h3{ color:var(--couleur-texte); }
+
+/* Liens accentués */
+a{ color:var(--couleur-accent); }
+
+/* Espace entre sections */
+section{ padding-top: calc(var(--espacement-base) * 0.5); padding-bottom: calc(var(--espacement-base) * 0.5); }
+
+/* Petite adaptation responsive pour les images de carte */
+@media (max-width:768px){ .card-img-top{ height:160px; } }
+
+/* Fin du fichier de réglages */
+
